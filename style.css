@@ -124,7 +124,6 @@ body {
   text-align: center;
   display: block;
   color: #D2C8F0;
-  text-decoration: underline;
   margin-top: 10px;
   padding: 10px;
   border: 1px solid #D2C8F070;
@@ -145,6 +144,15 @@ body {
 #contact-ul {
   display: flex;
   justify-content: center;
+}
+
+.time-span {
+  color: #a3a305;
+  margin-left: 10px;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 
