@@ -219,3 +219,35 @@ body {
   }
 }
 
+.animated-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-link::before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #7881F0 60%, transparent);
+  animation: loading-bar 2.5s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes loading-bar {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Yazının üstünde çizgi görünmesin diye */
+.animated-link span, .animated-link .link-content {
+  position: relative;
+  z-index: 2;
+}
