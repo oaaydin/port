@@ -18,7 +18,7 @@ a {
 }
 
 body {
-  background: linear-gradient(130deg, rgb(1, 7, 68) , rgb(69, 70, 83) );
+  background: linear-gradient(130deg, #010744 , #454653 );
   background-attachment:fixed;
 }
 
@@ -115,10 +115,42 @@ body {
   margin-top: 20px;
 }
 
-a:hover {
+.nav-item-a:hover {
   padding-left: 4em;
 }
 
 .nav-line {
   font-weight: 600;
+}
+
+.courses-a {
+  text-align: center;
+  display: block;
+  color: #D2C8F0;
+  text-decoration: underline;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #D2C8F070;
+  border-radius: 10px;
+  transition: all .2s;
+}
+
+.courses-a:hover {
+  background-color: #D2C8F0;
+  color: #010744;
+}
+
+.out-h2 {
+  text-align: center;
+  font-size: 2em;
+}
+
+
+
+
+@media (max-width: 1000px) {
+  body {
+    background: none;
+    background-color: red;
+  }
 }
