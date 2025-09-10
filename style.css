@@ -171,6 +171,28 @@ body {
     padding: 0 5%;
     background: linear-gradient(130deg, #010744 , #454653 );
   }
+  @media (max-width: 1000px) {
+  #left-section {
+    padding: 0.5em 2vw;      /* Daha az iç boşluk */
+    min-height: 56px;        /* Minimum yükseklik */
+  }
+  #first-box {
+    margin-top: 0.5em;       /* Üst boşluğu azalt */
+    gap: 0.2em;              /* Öğeler arası boşluğu azalt */
+  }
+  #name {
+    font-size: 2em;          /* İsim boyutunu küçült */
+  }
+  #job {
+    font-size: 1.2em;        /* Meslek boyutunu küçült */
+  }
+  #slogan {
+    font-size: 1em;          /* Slogan boyutunu küçült */
+  }
+  .nav-item > * {
+    padding: 0.7em 0.5em;    /* Menü öğelerinin iç boşluğunu azalt */
+  }
+}
 
   #right-section {
     width: 100%;
