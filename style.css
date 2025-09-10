@@ -116,10 +116,6 @@ body {
   margin-top: 20px;
 }
 
-.nav-item-a:hover {
-  padding-left: 4em;
-}
-
 .nav-line {
   font-weight: 600;
 }
@@ -213,8 +209,5 @@ body {
   #footer {
     display: none;
   }
-  .nav-item-a:hover {
-  padding-left: none;
-}
 }
 
