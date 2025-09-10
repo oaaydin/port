@@ -70,7 +70,7 @@
       <div id="contact">
         <h2 class="out-h2">Contact</h2>
         <div class="line"></div>
-        <ul>
+        <ul id="contact-ul">
           <li><a href="mailto:oguzhanaydin-@outlook.com"><i class="fa-regular fa-envelope"
                 style="color: #D2C8F0;"></i></a></li>
           <li><a href="https://www.linkedin.com/in/o%C4%9Fuzhan-ayd%C4%B1n-5555ab145/"><i
@@ -83,31 +83,38 @@
   </div>
   <script src="https://kit.fontawesome.com/7a80543519.js" crossorigin="anonymous"></script>
   <script>
-  // About için
-  document.querySelector('a[href="#about-span"]').addEventListener('click', function(e) {
-    e.preventDefault();
-    const aboutSpan = document.getElementById('about-span');
-    if (aboutSpan) {
-      aboutSpan.scrollIntoView({ behavior: "smooth", block: "center" });
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    const navbar = document.getElementById('left-section');
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const scrollY = window.pageYOffset;
+      if (window.innerWidth <= 1000 && navbar) {
+        // Sadece navbar yüksekliği kadar yukarıdan başlat
+        const navbarHeight = navbar.offsetHeight;
+        const top = scrollY + rect.top - navbarHeight - 100; // 16px ekstra boşluk için
+        window.scrollTo({ top, behavior: "smooth" });
+      } else {
+        // Masaüstünde ortala
+        const top = scrollY + rect.top - (window.innerHeight / 2) + (rect.height / 2);
+        window.scrollTo({ top, behavior: "smooth" });
+      }
     }
+  }
+
+  document.querySelector('a[href="#about-span"]')?.addEventListener('click', function(e) {
+    e.preventDefault();
+    scrollToSection('about-span');
   });
 
-  // Projects için
-  document.querySelector('a[href="#projects"]').addEventListener('click', function(e) {
+  document.querySelector('a[href="#projects"]')?.addEventListener('click', function(e) {
     e.preventDefault();
-    const projects = document.getElementById('projects');
-    if (projects) {
-      projects.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
+    scrollToSection('projects');
   });
 
-  // Contact için
-  document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+  document.querySelector('a[href="#contact"]')?.addEventListener('click', function(e) {
     e.preventDefault();
-    const contact = document.getElementById('contact');
-    if (contact) {
-      contact.scrollIntoView({ behavior: "smooth", block: "center" });
-    }
+    scrollToSection('contact');
   });
 </script>
 </body>
