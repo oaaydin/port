@@ -155,6 +155,25 @@ body {
   text-decoration: underline;
 }
 
+.project {
+  text-align: center;
+  display: block;
+  color: #D2C8F0;
+  margin-top: 10px;
+  padding: 20px;
+  border: 5px solid #D2C8F070;
+  border-radius: 10px;
+  transition: all .2s;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.project:hover {
+  background-color: #966f82;
+  color: #010744;
+}
+
 
 @media (max-width: 1000px) {
   #container {
